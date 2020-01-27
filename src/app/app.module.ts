@@ -15,11 +15,13 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormBuilder, FormControl } from '@angular/forms';
+import { FundstransferComponent } from './pages/fundstransfer/fundstransfer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    FundstransferComponent,
   ],
   imports: [
     

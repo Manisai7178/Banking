@@ -14,7 +14,7 @@ import {
   MatInputModule,
   MatNativeDateModule,
   MatIconModule,
-  
+
 } from "@angular/material";
 import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
@@ -25,10 +25,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { DashboardModule } from 'src/app/pages/dashboard/dashboard.module';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, SignupComponent, AccountdetailsComponent, ForgetPasswordComponent],
+  declarations: [LoginComponent,
+    SignupComponent, AccountdetailsComponent, ForgetPasswordComponent, UserloginComponent, AdminloginComponent],
   imports: [
     CommonModule,
     LoginRoutingModule,

@@ -7,6 +7,8 @@ import { AccountdetailsComponent } from './accountdetails/accountdetails.compone
 
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { DashboardComponent } from 'src/app/pages/dashboard/dashboard.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 const routes: Routes = [
@@ -14,7 +16,11 @@ const routes: Routes = [
 { path: 'signup', component: SignupComponent },
 { path: 'account', component: AccountdetailsComponent },
 { path: 'forget', component: ForgetPasswordComponent },
-{path: 'dashboard', loadChildren: () => import('./../../pages/dashboard/dashboard.module').then(m => m.DashboardModule)}
+{ path: 'userlogin', component:  UserloginComponent},
+{ path: 'adminlogin', component:  AdminloginComponent},
+
+{ path: 'dashboard', loadChildren: () => import('./../../pages/dashboard/dashboard.module').then(m => m.DashboardModule)},
+{ path: 'admin', loadChildren: () => import('./../../pages/admin-dashboard/admin-dashboard/admin-dashboard.module').then(m => m.AdminDashboardModule)}
 
 ];
 

@@ -25,17 +25,19 @@ export class LoginComponent implements OnInit {
 
      });
   }
-  
+
   login():void{
+    this.router.navigate(['/login/admin']);
+
     console.log('hiiii');
     let url=this.url+"/"+this.loginForm.controls.customerUsername.value+"/"+this.loginForm.controls.customerPassword.value;
     alert(url);
     this.http.get(url).subscribe(data=>{
       alert('hii');
-      this.router.navigate(['/login/dashboard']);
+      this.router.navigate(['/login/admin']);
   })
   }
-  
+
 
 
 }

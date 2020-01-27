@@ -29,7 +29,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Mobile Number</mat-label>
         <input type="number" matInput formControlName="mobileNo" >
-      </mat-form-field>      
+      </mat-form-field>
     </div>
     <div class="example-container" fxFlex.xs="15">
       <mat-form-field appearance="outline">
@@ -43,7 +43,7 @@
           <select matNativeControl required formControlName="gender">
             <option value="Male">Male</option>
             <option value="Female ">Female</option>
-           
+
           </select>
       </mat-form-field>
     </div>
@@ -79,10 +79,10 @@
       <mat-form-field appearance="outline">
           <mat-label>state</mat-label>
           <select matNativeControl required formControlName="state">
-            <option value="Maharashtra">Volvo</option>
-            <option value="Karnataka">Saab</option>
+            <option value="stat.State" *ngFor="let stat of states">{{stat.State}}</option>
+            <!-- <option value="Karnataka">Saab</option>
             <option value="Andrapradesh">Mercedes</option>
-            <option value="Tamilnadu">Audi</option>
+            <option value="Tamilnadu">Audi</option> -->
           </select>
       </mat-form-field>
     </div>
@@ -90,10 +90,10 @@
       <mat-form-field appearance="outline">
           <mat-label>City</mat-label>
           <select matNativeControl required formControlName="city">
-            <option value="Mumbai">Mumbai</option>
-            <option value="Banglore">Banglore</option>
+            <option value="stat.City" *ngFor="let stat of states">{{stat.City}}</option>
+            <!-- <option value="Banglore">Banglore</option>
             <option value="Chennai">Chennai</option>
-            <option value="Hyderabad">Hyderabad</option>
+            <option value="Hyderabad">Hyderabad</option> -->
           </select>
       </mat-form-field>
     </div>

@@ -11,6 +11,7 @@ export class AccountdetailsComponent implements OnInit {
 
 
   accountdetails: FormGroup;
+  public states:any
   constructor(private accountService:SignupService) {
 
     this.accountdetails= new FormGroup({
@@ -35,6 +36,10 @@ export class AccountdetailsComponent implements OnInit {
 
 
   ngOnInit() {
+    this.accountService.getCountries().subscribe(data=>{
+      console.log(data);
+      this.states=data
+    })
   }
 reset()
 {

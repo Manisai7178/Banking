@@ -1,0 +1,21 @@
+/* Add application styles & imports to this file! */
+.sec1 {
+  background: black;
+  color:white;
+}
+
+.mat-raised-button{
+  min-width: 178px !important;
+}
+.cent{
+  height:620px;
+
+}
+.centtetet{
+
+  padding-left: 42%;
+  padding-top: 15%;
+}
+.pad{
+  padding-bottom: 10px;
+}
