@@ -1,0 +1,73 @@
+
+<div class="bounds">
+    <div
+       fxLayout="row"
+       fxLayout.xs="row"
+       fxFlexFill >
+       <div class="sec1">
+        <!-- <mat-toolbar color="primary" >Register</mat-toolbar> -->
+        <h4>Register</h4>
+           <form [formGroup]="signupForm" (ngSubmit)="saveSignup(signupForm.value)">
+        <!-- <legend class="borderof">Register</legend> -->
+        <div class="example-container" fxFlex.xs="55">
+          <mat-form-field appearance="outline">
+            <mat-label>UserName</mat-label>
+            <input type="text" matInput formControlName="customerUsername" required minlength="6">
+           
+          </mat-form-field>      </div>
+      <div class="example-container" fxFlex.xs="55">
+        <mat-form-field appearance="outline">
+          <mat-label>Account Number</mat-label>
+          <input type="number" matInput formControlName="account_no">
+        </mat-form-field>      </div>
+      <div class="example-container" >
+        <mat-form-field appearance="outline">
+          <mat-label>Set Login Password</mat-label>
+
+          <input type="password"  matInput  formControlName="customerPassword">
+        </mat-form-field>
+            </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Login Password</mat-label>
+          <input type="password" matInput formControlName="clpwd" >
+        </mat-form-field>
+      </div>
+      <div class="example-container"  fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>Set Transaction Password</mat-label>
+          <input type="password" matInput formControlName="transactionPassword">
+        </mat-form-field>      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>confirm Transaction Password</mat-label>
+          <input type="password" matInput formControlName="ctpwd">
+        </mat-form-field>
+      </div>
+      <!-- <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>OTP</mat-label>
+          <input type="number" maxlength="6" matInput >
+        </mat-form-field>
+      </div> -->
+      <div class="example-container" fxFlex.xs="15">
+        <button mat-raised-button color="primary">Register</button>
+
+      </div>
+    </form>
+    </div>
+    <!-- </fieldset> -->
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+

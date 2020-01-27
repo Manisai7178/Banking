@@ -1,0 +1,40 @@
+/* Add application styles & imports to this file! */
+
+.bounds {
+  height :800px;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.sec1 {
+ padding: 30px;
+ border: 2px solid blue;
+ width: 30%;
+ margin: 2%;
+ margin-left: 30%;
+ border-radius: 20px 0px 20px 0px;
+}
+
+.sec2 {
+
+
+}
+
+.sec3 {
+
+}
+
+.sec1, .sec2, .sec3 {
+  text-align:center
+}
+
+.content {
+  min-width: 300px;
+  /*height: 400px;*/
+}

@@ -1,0 +1,6 @@
+package com.lti.model;
+@Entity
+public class ApplicationForm 
+{
+
+}

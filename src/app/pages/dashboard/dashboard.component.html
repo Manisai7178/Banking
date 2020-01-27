@@ -1,0 +1,141 @@
+<!-- s> -->
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mat-list class="upp">
+      <mat-divider></mat-divider>
+
+      <mat-list-item>Acccount Summary</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Account Statement</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Funds Transfer</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Account Settings</mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+
+    <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+  </mat-drawer>
+
+  <div class="side">
+    <mat-toolbar color="primary" style="border: 1px solid white;">
+      <mat-toolbar-row>
+
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md  fxLayout="column">
+          <a mat-button>
+            <i class="material-icons" style="font-size:39px;"  (click)="drawer.toggle()">
+              vertical_split
+              </i></a>
+          <!-- <a href="#" mat-button>Menu Item 2</a>
+          <a href="#" mat-button>Menu Item 3</a>
+          <a href="#" mat-button>Menu Item 4</a>
+          <a href="#" mat-button>Menu Item 5</a> -->
+          <!-- <a href="#" mat-button class="right" >    -->
+
+           <a> <button mat-raised-button color="primary">
+            <mat-icon>account_box</mat-icon>
+          </button></a>
+
+        <!-- </a> -->
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div style="display: flex;margin: 10px;" fxLayoutGap="10px;">
+      <div >
+      <mat-card class="example-card" >
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>Account Summary</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
+        <mat-card-content>
+          <p>
+            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      </div>
+      <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>Account Statement</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
+        <mat-card-content>
+          <p>
+            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      </div>
+      <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>Fund Transfer</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
+        <mat-card-content>
+          <p>
+            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      </div>
+
+      <!-- <mat-card>
+        Sandeep : The  fullstack Developer
+        Imran
+      </mat-card>
+      <mat-card>Simple card</mat-card>
+      <mat-card>Simple card</mat-card> -->
+
+    </div>
+    <!-- <mat-toolbar color="primary" style="border: 1px solid white;">
+
+        <i class="material-icons" style="font-size:39px;"  (click)="drawer.toggle()">
+          vertical_split
+          </i>
+      <div fxLayoutAlign="flex-end" style="float: right;">
+      <button mat-raised-button color="primary">
+        <mat-icon>account_box</mat-icon>
+      </button>
+    </div>
+
+    </mat-toolbar> -->
+    <!-- <button type="button" mat-raised-button (click)="drawer.toggle()">
+      <i class="material-icons" style="font-size:39px;">
+        vertical_split
+        </i>
+   </button>
+    <button mat-raised-button style="float: right;" >
+      <mat-icon>account_box</mat-icon>
+    </button> -->
+  </div>
+</mat-drawer-container>

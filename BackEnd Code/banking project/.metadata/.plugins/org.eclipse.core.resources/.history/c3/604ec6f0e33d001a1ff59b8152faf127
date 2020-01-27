@@ -1,0 +1,9 @@
+package com.lti.service;
+
+import com.lti.model.CustomerApplication;
+
+
+public interface CustomerService {
+	public boolean addCustomer(CustomerApplication customer);
+	public CustomerApplication findCustomerByC_id(int customer_id);
+}
