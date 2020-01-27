@@ -6,7 +6,8 @@ import { Router } from 'onlinebanking/node_modules/@angular/router/router';
 
   providedIn: 'root'
 })
-export class SignupService {
+export class SignupService
+ {
 
   constructor(private http:HttpClient, private router:Router) { }
   saveCustomerDetails(post){
