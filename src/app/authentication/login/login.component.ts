@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  url:string="http://192.168.12.66:9191/customers";
+  url:string="http://192.168.12.66:9191/admin";
   result:any;
   loginForm: FormGroup;
   //data:any;
@@ -20,17 +20,17 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
     this.loginForm =this.formBuilder.group({
-      customerUsername: [''] ,
-      customerPassword: ['']
+      adminId: [''] ,
+      adminPassword: ['']
 
      });
   }
 
   login():void{
-    this.router.navigate(['/login/admin']);
+    // this.router.navigate(['/login/admin']);
 
     console.log('hiiii');
-    let url=this.url+"/"+this.loginForm.controls.customerUsername.value+"/"+this.loginForm.controls.customerPassword.value;
+    let url=this.url+"/"+this.loginForm.controls.adminId.value+"/"+this.loginForm.controls. adminPassword.value;
     alert(url);
     this.http.get(url).subscribe(data=>{
       alert('hii');

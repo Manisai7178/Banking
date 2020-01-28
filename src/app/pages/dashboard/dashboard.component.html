@@ -8,7 +8,7 @@
       <mat-divider></mat-divider>
       <mat-list-item>Account Statement</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item>Funds Transfer</mat-list-item>
+      <mat-list-item routerLink='//login/dashboard/fund'>Funds Transfer</mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>Account Settings</mat-list-item>
       <mat-divider></mat-divider>
@@ -45,76 +45,10 @@
     </mat-toolbar>
 
     <div style="display: flex;margin: 10px;" fxLayoutGap="10px;">
-      <div >
-      <mat-card class="example-card" >
-        <mat-card-header>
-          <!-- <div mat-card-avatar class="example-header-image"></div> -->
-          <mat-card-title>Account Summary</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
-        <mat-card-content>
-          <p>
-            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-      </div>
-      <div>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <!-- <div mat-card-avatar class="example-header-image"></div> -->
-          <mat-card-title>Account Statement</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
-        <mat-card-content>
-          <p>
-            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-      </div>
-      <div>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <!-- <div mat-card-avatar class="example-header-image"></div> -->
-          <mat-card-title>Fund Transfer</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Daber man"> -->
-        <mat-card-content>
-          <p>
-            The Daber man is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Daber man was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
-      </div>
 
-      <!-- <mat-card>
-        Sandeep : The  fullstack Developer
-        Imran
-      </mat-card>
-      <mat-card>Simple card</mat-card>
-      <mat-card>Simple card</mat-card> -->
+
+
+    <router-outlet></router-outlet>
 
     </div>
     <!-- <mat-toolbar color="primary" style="border: 1px solid white;">

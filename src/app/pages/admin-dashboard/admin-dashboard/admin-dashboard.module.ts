@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatDividerModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatDividerModule, MatTableModule } from '@angular/material';
 import {MatListModule, MatListItem} from '@angular/material/list';
 
 @NgModule({
@@ -13,7 +13,7 @@ import {MatListModule, MatListItem} from '@angular/material/list';
     CommonModule,
     AdminDashboardRoutingModule,  MatSidenavModule,MatButtonModule,
     MatToolbarModule, MatIconModule,MatListModule,
-    MatCardModule,MatDividerModule
+    MatCardModule,MatDividerModule,MatTableModule
   ]
 })
 export class AdminDashboardModule { }

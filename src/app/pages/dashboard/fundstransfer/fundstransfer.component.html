@@ -1,0 +1,70 @@
+<div fxLayout="row" fxFlexFill>
+  <div class="sec1">
+    <h3>FundsTransfer</h3>
+<form [formGroup]="AddBenififcaryForm" (ngSubmit)="AddBenfifciary(AddBenififcaryForm.value)">
+    <div class="example-container" fxFlex.xs="55">
+      <mat-form-field appearance="outline">
+        <mat-label>BeneficaryAccountNo</mat-label>
+        <input type="text" matInput formControlName="beneficiaryAccountNo">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="example-container" fxFlex.xs="15">
+      <mat-form-field appearance="outline">
+        <mat-label>BenficiaryName</mat-label>
+        <input type="text" matInput formControlName="beneficiaryName">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="example-container" fxFlex.xs="15">
+      <mat-form-field appearance="outline">
+        <mat-label>BenficiaaryBranchIfsc</mat-label>
+        <input type="text" matInput formControlName="beneficiaryBranchIfsc">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="example-container" fxFlex.xs="15">
+      <button mat-raised-button color="primary" type="submit">Add Beneficiary</button>
+    </div>
+    <form [formGroup]="FundsTransferForm" (ngSubmit)="FundsTransfer(FundsTransferForm.value)">
+      <div class="example-container" fxFlex.xs="55">
+        <mat-checkbox>NEFT</mat-checkbox>
+        <mat-checkbox>IMPS</mat-checkbox>
+        <mat-checkbox>RTGS</mat-checkbox>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>BeneficaryAccountNo</mat-label>
+          <input type="text" matInput formControlName="beneficiaryAccountNo">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>BenficiaryName</mat-label>
+          <input type="text" matInput formControlName="beneficiaryName">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>BenficiaaryBranchIfsc</mat-label>
+          <input type="text" matInput formControlName="beneficiaryBranchIfsc">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input type="text" matInput formControlName="amount">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="example-container" fxFlex.xs="15">
+        <button mat-raised-button color="primary" type="submit">Transfer funds</button>
+      </div>
+  </form>
+
+
+

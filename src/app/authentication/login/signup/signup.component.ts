@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SignupService } from 'src/app/shared/signup.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 signupForm:FormGroup;
-  constructor(private sSignupService:SignupService) {
+  constructor(private sSignupService:SignupService,private router:Router) {
     this.signupForm=new FormGroup({
       'customerUsername':new FormControl('',Validators.required),
       'account_no':new FormControl('',Validators.required),
@@ -19,16 +20,17 @@ signupForm:FormGroup;
       'ctpwd':new FormControl('',Validators.required),
     })
    }
-   
+
   saveSignup(post){
-      
+
       this.sSignupService.saveCustomerDetails(this.signupForm.value).subscribe((data:any)=>{
       alert("--->"+data);
-      alert("Successfully registered")
+      alert("Successfully registered");
+      this.router.navigate(['/']);
       })
     }
-  
-      
+
+
     ngOnInit() {
     }
 
