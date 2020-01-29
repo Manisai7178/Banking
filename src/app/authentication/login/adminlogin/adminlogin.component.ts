@@ -10,6 +10,8 @@ export class AdminloginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+  
 
 }

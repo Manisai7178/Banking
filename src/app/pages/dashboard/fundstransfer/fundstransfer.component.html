@@ -2,6 +2,7 @@
   <div class="sec1">
     <h3>FundsTransfer</h3>
 <form [formGroup]="AddBenififcaryForm" (ngSubmit)="AddBenfifciary(AddBenififcaryForm.value)">
+    <h3>Add Benficiary</h3>
     <div class="example-container" fxFlex.xs="55">
       <mat-form-field appearance="outline">
         <mat-label>BeneficaryAccountNo</mat-label>
@@ -25,17 +26,45 @@
     </div>
 
     <div class="example-container" fxFlex.xs="15">
+      <mat-form-field appearance="outline">
+        <mat-label>Sender Account No</mat-label>
+        <input type="text" matInput formControlName="accountNo">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="example-container" fxFlex.xs="15">
       <button mat-raised-button color="primary" type="submit">Add Beneficiary</button>
     </div>
     <form [formGroup]="FundsTransferForm" (ngSubmit)="FundsTransfer(FundsTransferForm.value)">
+      <h3>Transfer</h3>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+         
+            <mat-label>Mode of Payment</mat-label>
+            <select matNativeControl required formControlName="modeOfPayment">
+              <option value="stat.State" >Mode of Payment</option>
+              <option value="RTGS">RTGS</option>
+              <option value="IMPS">IMPS</option>
+              <option value="NEFT">NEFT</option>
+            </select>
+        </mat-form-field>
+      </div>
       <div class="example-container" fxFlex.xs="55">
-        <mat-checkbox>NEFT</mat-checkbox>
+        <!--<mat-checkbox>NEFT</mat-checkbox>
         <mat-checkbox>IMPS</mat-checkbox>
         <mat-checkbox>RTGS</mat-checkbox>
-        <br>
+        <br>-->
         <mat-form-field appearance="outline">
           <mat-label>BeneficaryAccountNo</mat-label>
           <input type="text" matInput formControlName="beneficiaryAccountNo">
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>Your Account No</mat-label>
+          <input type="text" matInput formControlName="accountNo">
           <mat-icon matSuffix></mat-icon>
         </mat-form-field>
       </div>
@@ -56,8 +85,16 @@
       <div class="example-container" fxFlex.xs="15">
         <mat-form-field appearance="outline">
           <mat-label>Amount</mat-label>
-          <input type="text" matInput formControlName="amount">
+          <input type="text" matInput formControlName="amountCreditDebit">
           <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="example-container" fxFlex.xs="15">
+        <mat-form-field appearance="outline">
+          <mat-label>Today's Date</mat-label>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="transactionDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
 

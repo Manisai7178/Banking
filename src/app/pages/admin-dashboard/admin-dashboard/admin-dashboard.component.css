@@ -12,7 +12,7 @@
 } */
 
 .example-sidenav {
-  padding: 20px;
+  padding: 30px;
 }
 .upp{
   margin-top: 23px;
@@ -27,6 +27,23 @@
   /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
   background-size: cover;
 }
-table {
-  width: 100%;
+.myclass {
+  table-layout: auto;
+  position: relative;
+  border-radius: 5px;
+  border-style:solid;
+  border: 1px solid #ddd;
+  padding: 10px 8px 10px 8px;
+
 }
+
+table tr td {
+  table-layout: auto;
+  position: relative;
+  border-radius: 5px;
+  border-style:solid;
+  border: 1px solid #ddd;
+  padding: 10px 8px 10px 8px;
+
+}
+

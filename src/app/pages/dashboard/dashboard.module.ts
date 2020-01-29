@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatButtonModule, MatToolbarModule, MatIconModule, MatCard, MatCardModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatCard, MatCardModule, MatCheckboxModule, MatDatepickerModule, MatTableModule, } from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 import { FundstransferComponent } from './fundstransfer/fundstransfer.component';
 
@@ -30,7 +30,8 @@ import { ReactiveFormsModule, FormsModule, FormBuilder, FormControl } from "@ang
     DashboardRoutingModule,
     MatSidenavModule,MatButtonModule,
     MatToolbarModule, MatIconModule,MatListModule,
-    MatCardModule,ReactiveFormsModule,FormsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule
+    MatCardModule,ReactiveFormsModule,FormsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatDividerModule,MatTableModule, MatDatepickerModule,MatNativeDateModule
   ],
+  providers:[MatNativeDateModule]
 })
 export class DashboardModule { }

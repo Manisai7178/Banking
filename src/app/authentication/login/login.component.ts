@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  url:string="http://192.168.12.66:9191/admin";
+  url:string="http://192.168.12.66:9191/customers/admin";
   result:any;
   loginForm: FormGroup;
   //data:any;

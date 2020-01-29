@@ -1,121 +1,64 @@
-<!-- s> -->
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <mat-list class="upp">
-      <mat-divider></mat-divider>
 
-      <mat-list-item>Acccount Summary</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Account Statement</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Funds Transfer</mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>Account Settings</mat-list-item>
-      <mat-divider></mat-divider>
-    </mat-list>
+  <mat-toolbar color="primary" style="border: 1px solid white;">
+    <mat-toolbar-row>
 
-    <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button> -->
-  </mat-drawer>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md  fxLayout="column">
+        <a mat-button>
+          <i class="material-icons" style="font-size:39px;"  (click)="drawer.toggle()">
+            vertical_split
+            </i></a>
+      
+         <a> <button mat-raised-button color="primary" routerLink='/'>
+          <mat-icon>account_box</mat-icon>
+        </button></a>
 
-  <div class="side">
-    <mat-toolbar color="primary" style="border: 1px solid white;">
-      <mat-toolbar-row>
-
-        <span class="menu-spacer"></span>
-        <div fxShow="true" fxHide.lt-md  fxLayout="column">
-          <a mat-button>
-            <i class="material-icons" style="font-size:39px;"  (click)="drawer.toggle()">
-              vertical_split
-              </i></a>
-          <!-- <a href="#" mat-button>Menu Item 2</a>
-          <a href="#" mat-button>Menu Item 3</a>
-          <a href="#" mat-button>Menu Item 4</a>
-          <a href="#" mat-button>Menu Item 5</a> -->
-          <!-- <a href="#" mat-button class="right" >    -->
-
-           <a> <button mat-raised-button color="primary" routerLink='/'>
-            <mat-icon>account_box</mat-icon>
-          </button></a>
-
-        <!-- </a> -->
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
-
-    <div style="display: flex;margin: 10px;" fxLayoutGap="10px;">
-      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-
-        <!-- Position Column -->
-        <ng-container matColumnDef="cname">
-          <th mat-header-cell *matHeaderCellDef> cname </th>
-          <td mat-cell *matCellDef="let element"> {{element.cname}} </td>
-        </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="Acnumber">
-          <th mat-header-cell *matHeaderCellDef> Account Number </th>
-          <td mat-cell *matCellDef="let element"> {{element.Acnumber}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Action">
-          <th mat-header-cell *matHeaderCellDef> Action </th>
-          <td mat-cell *matCellDef="let element">
-            <button mat-stroked-button color="accent">Pending</button>
-            <button mat-stroked-button color="warn">Verified</button>
-            <button mat-stroked-button color="warn">Rejected</button>
-          </td>
-        </ng-container>
-        <!-- <ng-container matColumnDef="Action">
-          <th mat-header-cell *matHeaderCellDef>Action </th>
-          <td>
-            <button mat-stroked-button color="accent">pending</button>
-            <button mat-stroked-button color="warn">verified</button>
-          </td>
-        </ng-container> -->
-
-        <!-- Weight Column -->
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
 
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-
-
-
-
-
-      <!-- <mat-card>
-        Sandeep : The  fullstack Developer
-        Imran
-      </mat-card>
-      <mat-card>Simple card</mat-card>
-      <mat-card>Simple card</mat-card> -->
-
-    </div>
-    <!-- <mat-toolbar color="primary" style="border: 1px solid white;">
-
-        <i class="material-icons" style="font-size:39px;"  (click)="drawer.toggle()">
-          vertical_split
-          </i>
-      <div fxLayoutAlign="flex-end" style="float: right;">
-      <button mat-raised-button color="primary">
-        <mat-icon>account_box</mat-icon>
-      </button>
-    </div>
-
-    </mat-toolbar> -->
-    <!-- <button type="button" mat-raised-button (click)="drawer.toggle()">
-      <i class="material-icons" style="font-size:39px;">
-        vertical_split
-        </i>
-   </button>
-    <button mat-raised-button style="float: right;" >
-      <mat-icon>account_box</mat-icon>
-    </button> -->
+  <table >
+    <div class="myclass">
+    <tr>
+      <td>Customer ID</td>
+      <td>Customer Name</td>
+      <td>Gender</td>
+      <td>Father Name</td>
+      <td>Mobile No</td>
+      <td>Email</td>
+      <td>Aadhar No</td>
+      <td>Pan No</td>
+      <td>Date of Birth</td>
+      <td>Addrees</td>
+      <td>State</td>
+      <td>Pincode</td>
+      <td>City</td>
+      <td>Account type</td>
+      <td>Annual Income</td>
+      <td>Occupation Type</td>
+    </tr>
   </div>
-</mat-drawer-container>
+<div *ngFor="let cust of customers">
+  <tr>
+ <td>{{ cust.customerId}}</td> 
+ <td>{{ cust.customerUsername}}</td> 
+ <td>{{cust.Gender}}</td> 
+ <td> {{cust.FatherName}}</td> 
+ <td> {{cust.mobileNo}}</td> 
+ <td> {{cust.email}}</td> 
+ <td> {{cust.adhaarNo}}</td> 
+ <td> {{cust.panNo}}</td>
+ <td>{{cust.dateOfBirth}}</td> 
+ <td> {{cust.address}}</td> 
+ <td>{{cust.state}}</td>  
+ <td> {{cust.city}}</td> 
+ <td>{{cust.pincode}}</td> 
+ <td>{{cust.accountType}}</td> 
+ <td> {{cust.annualIncome}}</td>
+ <td>{{cust.occupationType}}</td> 
+ <td><button (click)="onSubmit(cust.email) ">Verify </button></td>
+</tr>
+</div>
+</table>
 

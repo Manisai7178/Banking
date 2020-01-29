@@ -19,7 +19,7 @@ export class SignupService
   saveAccountDetails(post){
     return this.http.post('http://192.168.12.66:9191/customers/saving',post).pipe(map(data=>{
       alert('Details saved successfully');
-      this.router.navigate(['/login/dashboard']);
+      
      
     }))
   };
@@ -27,4 +27,11 @@ export class SignupService
    {
     return this.http.get("https://indian-cities-api-nocbegfhqg.now.sh/cities")
     }
+    GetAdminDashboard(){
+      return this.http.get('http://192.168.12.66:9191/customers/saving').pipe(map(data=>{
+        alert('Details saved successfully');
+        
+       
+      }))
 }
+ }
